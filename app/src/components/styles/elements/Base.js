@@ -5,9 +5,14 @@ const Base = createGlobalStyle `
     :root {
         /* paleta de cores */
         --preto: #3F464D;
+        
         --azul: #2486C4;
+        --azul-active: #0e68a1;
+        --azul-hover: #26a2f0;
+
         --azul-claro: #7ECEFC;
-        --branco: #FFF6E6;
+        --branco1: #FFF6E6;
+        --branco2: #FFFFFF;
         --cinza: #848484;
 
         /* fontes */
@@ -22,6 +27,9 @@ const Base = createGlobalStyle `
         --semibold: 600;
         --bold: 700;
         --extrabold: 800;
+
+        /* border-radius */
+        --botao: 10px;
     }
 `
 

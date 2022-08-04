@@ -6,6 +6,8 @@ import Logo from '../components/titulos/Titulo1'
 import logoUrl from '../assets/logo.svg'
 import Titulo1 from '../components/titulos/Titulo1'
 import Titulo2 from '../components/titulos/Titulo2'
+import Botao from '../components/botoes/Botao'
+import LinkCadastro from '../components/botoes/LinkCadastro'
 
 function Login() {
   const [count, setCount] = useState(0)
@@ -16,6 +18,8 @@ function Login() {
         <Logo as='img' src={logoUrl} />
         <Titulo1>Cittavox</Titulo1>
         <Titulo2>Gestão colaborativa das cidades</Titulo2>
+        <Botao as='a' href='/login'>Entrar na conta</Botao>
+        <LinkCadastro href=''>Não possui conta?<span>Cadastrar</span></LinkCadastro>
       </Body>
     </>
   )
