@@ -6,7 +6,7 @@ function Login() {
   const [count, setCount] = useState(0)
 
   return (
-    <Titulo1>Login Cittavox</Titulo1>
+    <Titulo1>Cittavox</Titulo1>
   )
 }
 
