@@ -14,6 +14,7 @@ const Base = createGlobalStyle `
         --nunito: 'Nunito', sans-serif;
         --roboto: 'Roboto Flex', sans-serif;
         --inter: 'Inter', sans-serif;
+        --fredoka: 'Fredoka One', cursive;
 
         /* font-weight */
         --regular: 400;
