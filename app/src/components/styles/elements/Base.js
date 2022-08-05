@@ -5,6 +5,7 @@ const Base = createGlobalStyle `
     :root {
         /* paleta de cores */
         --preto: #3F464D;
+        --preto2: #2B2B2B;
         
         --azul: #2486C4;
         --azul-active: #0e68a1;
@@ -14,6 +15,7 @@ const Base = createGlobalStyle `
         --branco1: #FFF6E6;
         --branco2: #FFFFFF;
         --cinza: #848484;
+        --cinza2: #6A6A6A;
 
         /* fontes */
         --nunito: 'Nunito', sans-serif;

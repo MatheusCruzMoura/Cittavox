@@ -9,6 +9,8 @@ import voltarUrl from '../assets/icons/back.svg'
 import Nunito1 from '../components/titulos/Nunito1'
 import HeadLine from '../components/HeadLine'
 
+import Roboto1 from '../components/titulos/Roboto1'
+
 function Login() {
   const [count, setCount] = useState(0)
 
@@ -23,7 +25,7 @@ function Login() {
       
       <HeadLine />
 
-
+      <Roboto1>Bem vindo de volta!</Roboto1>
     </BodyLogin>
   )
 }
