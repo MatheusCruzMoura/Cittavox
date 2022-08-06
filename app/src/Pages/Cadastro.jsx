@@ -21,7 +21,7 @@ import senhaIcon from '../assets/icons/senha.svg'
 import BotaoEntrar from '../components/botoes/BotaoEntrar'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 
-function Login() {
+function Cadastro() {
   const [count, setCount] = useState(0)
 
   return (
@@ -63,4 +63,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Cadastro
