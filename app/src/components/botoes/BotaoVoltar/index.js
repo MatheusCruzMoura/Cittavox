@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 const ButaoVoltar = styled.button`
-    position: absolute;
+    position: fixed;
     top: 48px;
-    left: 36.4%;
+    transform: translateX(-650%);
 `
 
 export default ButaoVoltar
