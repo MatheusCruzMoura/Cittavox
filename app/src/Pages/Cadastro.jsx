@@ -30,7 +30,7 @@ function Cadastro() {
         <BotaoVoltar as='a' href='javascript:history.back()'>
           <Voltar as='img' src={voltarUrl} />
         </BotaoVoltar>
-        <Nunito1>Entrar na conta</Nunito1>
+        <Nunito1>Cadastro</Nunito1>
       </Navbar>
       
       <HeadLine />

@@ -19,7 +19,7 @@ function Login() {
         <Titulo1>Cittavox</Titulo1>
         <Titulo2>Gestão colaborativa das cidades</Titulo2>
         <Botao as='a' href='/login'>Entrar na conta</Botao>
-        <LinkCadastro href=''>Não possui conta?<span>Cadastrar</span></LinkCadastro>
+        <LinkCadastro href='/cadastro'>Não possui conta?<span>Cadastrar</span></LinkCadastro>
       </Body>
     </>
   )

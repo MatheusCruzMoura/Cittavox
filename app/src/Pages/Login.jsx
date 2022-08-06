@@ -43,7 +43,7 @@ function Login() {
           <img src={emailIcon} />
           <section>
             <label for='email'>Endereço de email</label>
-            <input type='email' id='email' placeholder='exemplo@email.com' />
+            <input type='email' id='email' placeholder='exemplo@email.com' required />
           </section>
         </InputLogin>
 
@@ -51,7 +51,7 @@ function Login() {
           <img src={senhaIcon} />
           <section>
             <label for='senha'>Senha</label>
-            <input type='password' id='senha' placeholder='*********' />
+            <input type='password' id='senha' placeholder='*********' required />
           </section>
         </InputLogin>
 
