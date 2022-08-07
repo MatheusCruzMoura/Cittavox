@@ -8,7 +8,7 @@ import Voltar from '../components/imagens/Voltar'
 import voltarUrl from '../assets/icons/back.svg'
 
 import Nunito1 from '../components/titulos/Nunito1'
-import HeadLine from '../components/HeadLine'
+import HeadLine from '../components/HeadLine/Inicio'
 
 import Roboto3 from '../components/titulos/Roboto3'
 

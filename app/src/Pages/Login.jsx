@@ -8,7 +8,7 @@ import Voltar from '../components/imagens/Voltar'
 import voltarUrl from '../assets/icons/back.svg'
 
 import Nunito1 from '../components/titulos/Nunito1'
-import HeadLine from '../components/HeadLine'
+import HeadLine from '../components/HeadLine/Inicio'
 
 import Roboto1 from '../components/titulos/Roboto1'
 import Roboto2 from '../components/titulos/Roboto2'
@@ -38,7 +38,7 @@ function Login() {
       <Roboto1>Bem vindo de volta!</Roboto1>
       <Roboto2>entre na conta para continuar</Roboto2>
 
-      <FormLogin action='/'>
+      <FormLogin action='/home'>
         <InputLogin>
           <img src={emailIcon} />
           <section>
