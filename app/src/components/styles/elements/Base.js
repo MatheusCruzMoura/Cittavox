@@ -18,6 +18,8 @@ const Base = createGlobalStyle `
         --cinza2: #6A6A6A;
         --cinza3: #EFEFEF;
         --cinza4: #BEBEBE;
+        --cinza5: #8A8A8A;
+        --cinza6: #E6E6E6;
 
         /* fontes */
         --nunito: 'Nunito', sans-serif;

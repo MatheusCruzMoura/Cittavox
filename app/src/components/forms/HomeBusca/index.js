@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 const HomeBusca = styled.form `
     width: 346px;
-    height: 44px;
     display: flex;
     align-items: center;
     margin-top: 20px;
 
     input {
         width: 100%;
-        height: 100%;
+        height: 44px;
         border: 1.5px solid var(--azul);
         border-radius: var(--botao);
         padding: 0;
