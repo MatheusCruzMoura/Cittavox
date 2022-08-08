@@ -38,7 +38,7 @@ function Cadastro() {
 
       <Roboto3>Crie sua conta para fazer sua reclamação</Roboto3>
 
-      <FormCadastro action='/'>
+      <FormCadastro action='/home'>
         <InputLogin>
           <img src={userIcon} />
           <section>
