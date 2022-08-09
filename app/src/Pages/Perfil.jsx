@@ -70,7 +70,6 @@ function Perfil() {
         <InfoPerfil>
             <input id='nomeInfo' placeholder='Jorge Cruz de moura' required />
         </InfoPerfil>
-
         
         <Roboto11>Genero</Roboto11>
         <InfoPerfil>
@@ -89,17 +88,16 @@ function Perfil() {
 
       </Informacao> 
 
+      <RobotoPerfil href=''>Salvar informações</RobotoPerfil>
+      <RobotoPerfil2 href='/'>Sair da conta</RobotoPerfil2>
+
         <HomeMenu2>
-          <MenuIcone href='' ><img src={houseMenu} /></MenuIcone>
-          <MenuIcone href=''><img src={mapaMenu} /></MenuIcone>
-          <MenuIcone href=''><img src={historicoMenu} /></MenuIcone>
+          <MenuIcone href='/Home' ><img src={houseMenu} /></MenuIcone>
+          <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
+          <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
           <MenuIcone href='' className='selected'><img src={userSelected} /></MenuIcone>
         </HomeMenu2>
-
-        <RobotoPerfil href=''>Salvar informações</RobotoPerfil>
-        <RobotoPerfil2 href=''>Sair da conta</RobotoPerfil2>
-
-    </BodyLogin>    
+      </BodyLogin>    
   )
 }
 

@@ -98,9 +98,9 @@ function Home() {
         
         <HomeMenu2>
             <MenuIcone href='' className='selected'><img src={houseMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={mapaMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={historicoMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={userMenu} /></MenuIcone>
+            <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
+            <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
+            <MenuIcone href='/Perfil'><img src={userMenu} /></MenuIcone>
         </HomeMenu2>
       </Body>
     </>
