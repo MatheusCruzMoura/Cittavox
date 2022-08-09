@@ -7,6 +7,7 @@ const HomeMenu1 = styled.section `
     justify-content: space-between;
     grid-row-gap: 10px;
     flex-wrap: wrap;
+    padding-bottom: 90px;
 `
 
 export default HomeMenu1

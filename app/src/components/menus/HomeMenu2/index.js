@@ -6,7 +6,9 @@ const HomeMenu2 = styled(HomeMenu1) `
     height: 70px;
     justify-content: center;
     margin-top: 32px;
+    padding-bottom: 0;
     border-top: 1px solid var(--cinza6);
+    background-color: var(--branco2);
     bottom: 0;
     position: fixed;
 
