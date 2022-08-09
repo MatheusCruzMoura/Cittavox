@@ -52,7 +52,7 @@ function Login() {
           <img src={emailIcon} />
           <section>
             <label for='email'>Endereço de email</label>
-            <input type='email' id='email' placeholder='exemplo@email.com' required />
+            <input type='email' id='email' placeholder='exemplo@email.com' maxLength={64} required />
           </section>
         </InputLogin>
 
@@ -60,7 +60,7 @@ function Login() {
           <img src={senhaIcon} />
           <section>
             <label for='senha'>Senha</label>
-            <input type='password' id='senha' placeholder='*********' required />
+            <input type='password' id='senha' placeholder='*********' maxLength={32} required />
             <input type="checkbox" id="mostrar" onClick={() => mostrarSenha('senha')}></input>
             <label for="mostrar" className='mostrar'><img src={olhoIcon} /></label>
           </section>
