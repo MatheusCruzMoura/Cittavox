@@ -11,6 +11,7 @@ import Inicio from './Pages/Inicio'
 import Login from './Pages/Login'
 import Cadastro from './Pages/Cadastro'
 import Home from './Pages/Home'
+import Perfil from './Pages/Perfil'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/cadastro' element={<Cadastro />} />
           <Route path='/home' element={<Home />} />
+          <Route path='/perfil' element={<Perfil/>} />
         </Routes>
       </Router>
     </>

@@ -7,6 +7,8 @@ const HomeMenu2 = styled(HomeMenu1) `
     justify-content: center;
     margin-top: 32px;
     border-top: 1px solid var(--cinza6);
+    bottom: 0;
+    position: fixed;
 
     .selected::after {
         content: '';
