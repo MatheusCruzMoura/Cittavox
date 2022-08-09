@@ -26,7 +26,7 @@ function Historico() {
         <BotaoVoltar as='a' href='javascript:history.back()'>
           <Voltar as='img' src={voltarUrl} />
         </BotaoVoltar>
-        <Nunito2>Perfil</Nunito2>
+        <Nunito2>Historico de Reclamações</Nunito2>
       </Navbar>
       
       <HeadLine />
@@ -35,7 +35,7 @@ function Historico() {
 
         <HomeMenu2>
           <MenuIcone href='/Home' ><img src={houseMenu} /></MenuIcone>
-          <MenuIcone href='/home'><img src={mapaMenu} /></MenuIcone>
+          <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
           <MenuIcone href='' className='selected'><img src={historicoMenu} /></MenuIcone>
           <MenuIcone href='/perfil'><img src={user} /></MenuIcone>
         </HomeMenu2>
