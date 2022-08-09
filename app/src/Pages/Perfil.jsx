@@ -68,13 +68,13 @@ function Perfil() {
       <Informacao>       
         <Roboto11>Nome Completo</Roboto11>
         <InfoPerfil>
-            <input id='nomeInfo' placeholder='Nome do Usuário' required />
+            <input id='nomeInfo' placeholder='Jorge Cruz de moura' required />
         </InfoPerfil>
 
         
         <Roboto11>Genero</Roboto11>
         <InfoPerfil>
-            <input id='genero' placeholder='Genero' required />            
+            <input id='genero' placeholder='Masculino' required />            
         </InfoPerfil>
 
         <Roboto11>Data de nascimento</Roboto11>
@@ -84,7 +84,7 @@ function Perfil() {
 
         <Roboto11>Sua descrição</Roboto11>
         <InfoPerfil>
-            <input id='descrição' placeholder='Sua descrição' required />            
+            <input id='descrição' placeholder='Descrição muito bonita' required />            
         </InfoPerfil>
 
       </Informacao> 
