@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import BodyLogin from '../components/body/Login'
 
 import Navbar from '../components/head/Navbar'
@@ -17,12 +15,23 @@ import FormLogin from '../components/forms/FormLogin'
 import emailIcon from '../assets/icons/email.svg'
 import InputLogin from '../components/inputs/InputLogin'
 import senhaIcon from '../assets/icons/senha.svg'
+import olhoIcon from '../assets/icons/olho.svg'
 
 import BotaoEntrar from '../components/botoes/BotaoEntrar'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 
+
+function mostrarSenha(id) {
+  const x = document.getElementById(id);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+
 function Login() {
-  const [count, setCount] = useState(0)
 
   return (
     <BodyLogin>
@@ -52,6 +61,8 @@ function Login() {
           <section>
             <label for='senha'>Senha</label>
             <input type='password' id='senha' placeholder='*********' required />
+            <input type="checkbox" id="mostrar" onClick={() => mostrarSenha('senha')}></input>
+            <label for="mostrar" className='mostrar'><img src={olhoIcon} /></label>
           </section>
         </InputLogin>
 

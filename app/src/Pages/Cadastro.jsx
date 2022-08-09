@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import BodyLogin from '../components/body/Login'
 
 import Navbar from '../components/head/Navbar'
@@ -18,13 +16,35 @@ import userIcon from '../assets/icons/user.svg'
 import dateIcon from '../assets/icons/date.svg'
 import InputLogin from '../components/inputs/InputLogin'
 import senhaIcon from '../assets/icons/senha.svg'
+import olhoIcon from '../assets/icons/olho.svg'
 
 import BotaoEntrar from '../components/botoes/BotaoEntrar'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 
-function Cadastro() {
-  const [count, setCount] = useState(0)
 
+function mostrarSenha(id) {
+  const x = document.getElementById(id);
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+
+function validarSenha() {
+  const senha = document.getElementById("senha")
+  const confirmarSenha = document.getElementById("confirmarSenha");
+  
+  if(senha.value != confirmarSenha.value) {
+    confirmarSenha.setCustomValidity("As senhas não são iguais!");
+  } else {
+    confirmarSenha.setCustomValidity('');
+  }
+}
+
+
+function Cadastro() {
   return (
     <BodyLogin>
       <Navbar>
@@ -67,15 +87,19 @@ function Cadastro() {
           <img src={senhaIcon} />
           <section>
             <label for='senha'>Senha</label>
-            <input type='password' id='senha' placeholder='*********' required />
+            <input type='password' id='senha' placeholder='*********' onChange={validarSenha} required />
+            <input type="checkbox" id="mostrar" onClick={() => mostrarSenha('senha')} />
+            <label for="mostrar" className='mostrar'><img src={olhoIcon} /></label>
           </section>
         </InputLogin>
 
         <InputLogin>
           <img src={senhaIcon} />
           <section>
-            <label for='confirmacaoSenha'>Confirme a senha</label>
-            <input type='password' id='confirmacaoSenha' placeholder='*********' required />
+            <label for='confirmarSenha'>Confirme a senha</label>
+            <input type='password' id='confirmarSenha' placeholder='*********' onKeyUp={validarSenha} required />
+            <input type="checkbox" id="mostrar2" onClick={() => mostrarSenha('confirmarSenha')} />
+            <label for="mostrar2" className='mostrar'><img src={olhoIcon} /></label>
           </section>
         </InputLogin>
 

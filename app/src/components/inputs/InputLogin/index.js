@@ -44,6 +44,20 @@ const InputLogin = styled.div `
         border: none;
         outline: none;
     }
+
+    input[type=checkbox] {
+        display: flex;
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .mostrar {
+        display: flex;
+        position: absolute;
+        cursor: pointer;
+        transform: translateX(250px);
+    }
+
 `
 
 export default InputLogin
