@@ -44,7 +44,8 @@ function Home() {
     useEffect(() => {
       api.get("/teste").then(
             (res) => {
-                setNomeUsuario(res.data[0])
+                console.log(res)
+                setNomeUsuario(res.data)
         }).catch((err) => {
             console.error("ops! ocorreu um erro" + err);
         });

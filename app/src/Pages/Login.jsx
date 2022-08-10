@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import api from "../Api";
+
 import BodyLogin from '../components/body/Login'
 
 import Navbar from '../components/head/Navbar'
@@ -29,7 +32,6 @@ function mostrarSenha(id) {
     x.type = "password";
   }
 }
-
 
 function Login() {
 
