@@ -14,10 +14,12 @@ import Home from './Pages/Home'
 import Perfil from './Pages/Perfil'
 import Historico from './Pages/Historico'
 import Mapa from './Pages/Mapa'
+import ReclamacaoEnviada from './Pages/ReclamacaoEnviada'
+import CriarReclamacao from './Pages/CriarReclamacao'
+import UltimaReclamacao from './Pages/UltimaReclamacao'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>      
       <Router>
@@ -29,6 +31,9 @@ function App() {
           <Route path='/perfil' element={<Perfil/>} />
           <Route path='/historico' element={<Historico/>} />
           <Route path='/mapa' element={<Mapa/>} />
+          <Route path='/reclamacao-enviada' element={<ReclamacaoEnviada/>} />
+          <Route path='/criar-Reclamacao' element={<CriarReclamacao/>} />
+          <Route path='/Ultima-Reclamacao' element={<UltimaReclamacao/>} />
         </Routes>
       </Router>
     </>

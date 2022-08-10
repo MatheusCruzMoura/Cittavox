@@ -1,14 +1,6 @@
 import { useState } from 'react'
 
-import Navbar from '../components/head/Navbar'
-import BotaoVoltar from '../components/botoes/BotaoVoltar'
-import Voltar from '../components/imagens/Voltar'
-
-import voltarUrl from '../assets/icons/back.svg'
-import HeadLine from '../components/HeadLine/Inicio'
 import BodyLogin from '../components/body/Login'
-import Nunito2 from '../components/titulos/Nunito2'
-
 
 import FotoPerfil from '../components/imagens/FotoPerfil'
 import FotoPerfilUrl from '../assets/ftperfil.png.svg'
@@ -31,27 +23,23 @@ import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userSelected from '../assets/icons/menu/user-selected.svg'
 import RobotoPerfil from '../components/titulos/RobotoPerfil'
 import RobotoPerfil2 from '../components/titulos/RobotoPerfil/index2'
+import MenuTop from '../components/menus/MenuTF/MenuTop'
 
 
+const nome = 'Jorge Cruz de moura'
+const genero = 'Masculino'
+const descricao = 'Reclamo, logo existo'
+const dataNascimento = '1970-05-11'
 
-
-const reclamações = 7
-const Pendentes = 2
-const comcluidos = 10
+const reclamações = 20384
+const Pendentes = 20383
 
 function Perfil() {
-  const [count, setCount] = useState(0)
 
   return (
     <BodyLogin>
-      <Navbar>
-        <BotaoVoltar as='a' href='javascript:history.back()'>
-          <Voltar as='img' src={voltarUrl} />
-        </BotaoVoltar>
-        <Nunito2>Perfil</Nunito2>
-      </Navbar>
-      
-      <HeadLine />
+
+      <MenuTop pagina="Perfil"/>
 
       <PerfilDados>
         <FotoPerfil as='img' src={FotoPerfilUrl} />
@@ -60,7 +48,7 @@ function Perfil() {
           <P>Total de reclamações: {reclamações}</P>
           <Ddados>
             <P2>Pendentes {Pendentes}</P2>
-            <P2>Comcluidos {comcluidos}</P2>
+            <P2>Comcluidos {reclamações-Pendentes}</P2>
           </Ddados>
         </Dados>
       </PerfilDados>
@@ -68,22 +56,22 @@ function Perfil() {
       <Informacao>       
         <Roboto11>Nome Completo</Roboto11>
         <InfoPerfil>
-            <input id='nomeInfo' placeholder='Jorge Cruz de moura' required />
+            <input id='nomeInfo' placeholder={nome} required />
         </InfoPerfil>
         
         <Roboto11>Genero</Roboto11>
         <InfoPerfil>
-            <input id='genero' placeholder='Masculino' required />            
+            <input id='genero' placeholder={genero} required />            
         </InfoPerfil>
 
         <Roboto11>Data de nascimento</Roboto11>
         <InfoPerfil>
-             <input type='date' id='dataNascimento' required />            
+             <input type='date' id='dataNascimento' value={dataNascimento} required />            
         </InfoPerfil>
 
         <Roboto11>Sua descrição</Roboto11>
         <InfoPerfil>
-            <input id='descrição' placeholder='Descrição muito bonita' required />            
+            <input id='descrição' placeholder={descricao} required />            
         </InfoPerfil>
 
       </Informacao> 
@@ -95,7 +83,7 @@ function Perfil() {
           <MenuIcone href='/Home' ><img src={houseMenu} /></MenuIcone>
           <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
           <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
-          <MenuIcone href='' className='selected'><img src={userSelected} /></MenuIcone>
+          <MenuIcone href='/perfil' className='selected'><img src={userSelected} /></MenuIcone>
         </HomeMenu2>
       </BodyLogin>    
   )

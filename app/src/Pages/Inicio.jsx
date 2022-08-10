@@ -10,7 +10,6 @@ import Botao from '../components/botoes/Botao'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 
 function Login() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
