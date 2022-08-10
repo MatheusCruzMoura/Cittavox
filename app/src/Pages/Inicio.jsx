@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Body from '../components/body/Inicio'
 
 import Logo from '../components/titulos/Titulo1'

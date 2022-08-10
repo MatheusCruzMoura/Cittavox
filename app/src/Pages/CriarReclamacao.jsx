@@ -4,8 +4,6 @@ import MapaCRft from '../assets/mapaCR.svg'
 
 import MapaCR from '../components/imagens/MapaCR'
 
-
-
 function CriarReclamacao() {
 
   return (

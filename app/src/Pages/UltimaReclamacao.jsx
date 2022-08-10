@@ -1,17 +1,11 @@
-import { useState } from 'react'
-
 import MenuTop from '../components/menus/MenuTF/MenuTop'
 import BodyLogin from '../components/body/Login'
-
 import MenuIcone from '../components/menus/HomeMenu2/MenuIcone'
 import HomeMenu2 from '../components/menus/HomeMenu2'
-
 import houseMenu from '../assets/icons/menu/house.svg'
 import mapaMenu from '../assets/icons/menu/mapa.svg'
 import historicoMenu from '../assets/icons/menu/historico-selected.svg'
 import user from '../assets/icons/menu/user-icon.svg'
-
-
 
 function UltimaReclamacao() {
 

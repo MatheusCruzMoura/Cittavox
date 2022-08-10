@@ -1,17 +1,11 @@
-import { useState } from 'react'
-
 import BodyLogin from '../components/body/Login'
-
 import HomeMenu2 from '../components/menus/HomeMenu2'
 import MenuIcone from '../components/menus/HomeMenu2/MenuIcone'
 import houseMenu from '../assets/icons/menu/house.svg'
 import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userIcon from '../assets/icons/menu/user-icon.svg'
 import MapaSelectec from '../assets/icons/menu/mapa-selected.svg'
-
 import MenuTop from '../components/menus/MenuTF/MenuTop'
-
-
 
 function Mapa() {
 

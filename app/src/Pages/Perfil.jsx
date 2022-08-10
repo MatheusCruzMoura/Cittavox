@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import BodyLogin from '../components/body/Login'
 
 import FotoPerfil from '../components/imagens/FotoPerfil'

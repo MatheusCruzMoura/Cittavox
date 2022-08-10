@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Body from '../components/body/BodyHome'
 import NavbarHome from '../components/head/NavbarHome'
 
@@ -36,7 +34,6 @@ import houseMenu from '../assets/icons/menu/house-selected.svg'
 import mapaMenu from '../assets/icons/menu/mapa.svg'
 import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userMenu from '../assets/icons/menu/user-icon.svg'
-
 
 function Home() {
 
