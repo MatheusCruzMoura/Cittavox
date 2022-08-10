@@ -6,7 +6,6 @@ import {
   Route
 } from "react-router-dom"
 
-// import Inicio from './Pages/Inicio'
 import Inicio from './Pages/Inicio'
 import Login from './Pages/Login'
 import Cadastro from './Pages/Cadastro'

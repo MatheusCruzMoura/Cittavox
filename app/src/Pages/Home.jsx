@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import React, { useEffect, useState } from "react";
+import api from "../Api";
 
 import Body from '../components/body/BodyHome'
 import NavbarHome from '../components/head/NavbarHome'
@@ -38,7 +39,16 @@ import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userMenu from '../assets/icons/menu/user-icon.svg'
 
 function Home() {
-  const [count, setCount] = useState(0)
+    const [nomeUsuario, setNomeUsuario] = useState();
+
+    useEffect(() => {
+      api.get("/teste").then(
+            (res) => {
+                setNomeUsuario(res.data[0])
+        }).catch((err) => {
+            console.error("ops! ocorreu um erro" + err);
+        });
+    }, []);
 
   return (
     <>
@@ -52,7 +62,7 @@ function Home() {
         <HeadLine />
 
         <NomeUsuario>
-            <h1>Olá, Jorge Cruz!</h1>
+            <h1>Olá, {nomeUsuario?.nome}!</h1>
             <h2>Bom dia!</h2>
         </NomeUsuario>
 
