@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Body from '../components/body/Inicio'
 
 import Logo from '../components/titulos/Titulo1'
@@ -10,7 +8,6 @@ import Botao from '../components/botoes/Botao'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 
 function Login() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

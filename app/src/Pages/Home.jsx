@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Body from '../components/body/BodyHome'
 import NavbarHome from '../components/head/NavbarHome'
 
@@ -38,13 +36,12 @@ import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userMenu from '../assets/icons/menu/user-icon.svg'
 
 function Home() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <Body>
-        <NavbarHome>
-            <UserHome src={userImg} />
+        <NavbarHome>            
+        <a href='/perfil'><UserHome src={userImg} /></a>
             <Nunito2>Inicio</Nunito2>
             <img className='notificacao' src={notificacaoIcon} />
         </NavbarHome>
@@ -75,32 +72,32 @@ function Home() {
 
         <Roboto4>Opções disponiveis</Roboto4>
         <HomeMenu1>
-            <HomeMenu1Item href=''>
+            <HomeMenu1Item href='/criar-Reclamacao'>
                 <img src={reclamacaoIcon} />
                 <ItemTitulo>Faça uma reclamação</ItemTitulo>
             </HomeMenu1Item>
 
-            <HomeMenu1Item href=''>
+            <HomeMenu1Item href='/Ultima-Reclamacao'>
                 <img src={ultimaReclamacaoIcon} />
                 <ItemTitulo>Última reclamação</ItemTitulo>
             </HomeMenu1Item>
             
-            <HomeMenu1Item href=''>
+            <HomeMenu1Item href='/historico'>
                 <img src={historicoIcon} />
                 <ItemTitulo>Histórico de reclamações</ItemTitulo>
             </HomeMenu1Item>
             
-            <HomeMenu1Item href=''>
+            <HomeMenu1Item href='/mapa'>
                 <img src={proximasIcon} />
                 <ItemTitulo>Reclamações próxima a você</ItemTitulo>
             </HomeMenu1Item>
         </HomeMenu1>
         
         <HomeMenu2>
-            <MenuIcone href='' className='selected'><img src={houseMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={mapaMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={historicoMenu} /></MenuIcone>
-            <MenuIcone href=''><img src={userMenu} /></MenuIcone>
+            <MenuIcone href='/home' className='selected'><img src={houseMenu} /></MenuIcone>
+            <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
+            <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
+            <MenuIcone href='/Perfil'><img src={userMenu} /></MenuIcone>
         </HomeMenu2>
       </Body>
     </>
