@@ -1,3 +1,6 @@
+import React, { useEffect, useState } from "react";
+import api from "../Api";
+
 import BodyLogin from '../components/body/Login'
 import Roboto1 from '../components/titulos/Roboto1'
 import Roboto2 from '../components/titulos/Roboto2'
@@ -19,7 +22,6 @@ function mostrarSenha(id) {
     x.type = "password";
   }
 }
-
 
 function Login() {
   const [count, setCount] = useState(0)
