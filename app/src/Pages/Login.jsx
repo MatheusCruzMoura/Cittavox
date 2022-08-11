@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import api from "../Api";
-
 import BodyLogin from '../components/body/Login'
+
+import MenuTop from '../components/menus/MenuTF/MenuTop'
+
 import Roboto1 from '../components/titulos/Roboto1'
 import Roboto2 from '../components/titulos/Roboto2'
 import FormLogin from '../components/forms/FormLogin'
@@ -24,7 +24,6 @@ function mostrarSenha(id) {
 }
 
 function Login() {
-  const [count, setCount] = useState(0)
 
   return (
     <BodyLogin>
