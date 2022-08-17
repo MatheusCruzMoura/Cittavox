@@ -1,3 +1,6 @@
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom"
+
 import BodyLogin from '../components/body/Login'
 
 import Roboto3 from '../components/titulos/Roboto3'
@@ -13,7 +16,7 @@ import olhoIcon from '../assets/icons/olho.svg'
 import BotaoEntrar from '../components/botoes/BotaoEntrar'
 import LinkCadastro from '../components/botoes/LinkCadastro'
 import MenuTop from '../components/menus/MenuTF/MenuTop'
-
+import api from "../Api";
 
 function mostrarSenha(id) {
   const x = document.getElementById(id);
@@ -25,19 +28,32 @@ function mostrarSenha(id) {
 }
 
 
-function validarSenha() {
-  const senha = document.getElementById("senha")
-  const confirmarSenha = document.getElementById("confirmarSenha");
-  
-  if(senha.value != confirmarSenha.value) {
-    confirmarSenha.setCustomValidity("As senhas não são iguais!");
-  } else {
-    confirmarSenha.setCustomValidity('');
-  }
-}
-
-
 function Cadastro() {
+  const { register, handleSubmit, watch, formState: { errors }, setValue } = useForm();
+
+  const navigate = useNavigate();
+
+  const onSubmit = data => {
+    
+    api.post("/usuario", data)
+    
+    navigate("/login")
+    // console.log(data)
+    console.log(JSON(data))
+  };
+
+  function validarSenha() {
+    const senha = document.getElementById("senha")
+    const confirmarSenha = document.getElementById("confirmarSenha");
+    
+    if(senha.value != confirmarSenha.value) {
+      confirmarSenha.setCustomValidity("As senhas não são iguais!");
+    } else {
+      confirmarSenha.setCustomValidity('');
+      setValue("senha", senha.value);
+    }
+  }
+
   return (
       <BodyLogin>
         <MenuTop pagina="Cadastro"/>
@@ -45,12 +61,12 @@ function Cadastro() {
 
       <Roboto3>Crie sua conta para fazer sua reclamação</Roboto3>
 
-      <FormCadastro action='/home'>
+      <FormCadastro onSubmit={handleSubmit(onSubmit)}>
         <InputLogin>
           <img src={userIcon} />
           <section>
             <label for='nome'>Nome completo</label>
-            <input id='nome' placeholder='Nome do Usuário' required />
+            <input id='nome' placeholder='Nome do Usuário' {...register("nome", { required: true })} />
           </section>
         </InputLogin>
 
@@ -58,7 +74,7 @@ function Cadastro() {
           <img src={dateIcon} />
           <section>
             <label for='dataNascimento'>Data de nascimento</label>
-            <input type='date' id='dataNascimento' required />
+            <input type='date' id='dataNascimento' {...register("dataNascimeto", { required: true })} />
           </section>
         </InputLogin>
 
@@ -66,7 +82,7 @@ function Cadastro() {
           <img src={emailIcon} />
           <section>
             <label for='email'>Endereço de email</label>
-            <input type='email' id='email' placeholder='exemplo@email.com' required />
+            <input id='email' placeholder='exemplo@email.com' {...register("email", { required: true }, {maxLength: 64})} />
           </section>
         </InputLogin>
 
@@ -74,7 +90,7 @@ function Cadastro() {
           <img src={senhaIcon} />
           <section>
             <label for='senha'>Senha</label>
-            <input type='password' id='senha' placeholder='*********' onChange={validarSenha} required />
+            <input type='password' id='senha'  placeholder='*********' onChange={validarSenha} />
             <input type="checkbox" id="mostrar" onClick={() => mostrarSenha('senha')} />
             <label for="mostrar" className='mostrar'><img src={olhoIcon} /></label>
           </section>

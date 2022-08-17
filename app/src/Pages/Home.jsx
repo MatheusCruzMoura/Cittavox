@@ -42,9 +42,9 @@ function Home() {
     const [nomeUsuario, setNomeUsuario] = useState();
 
     useEffect(() => {
-      api.get("/teste").then(
+      api.get(`/home/`).then(
             (res) => {
-                console.log(res)
+                console.log(res.data)
                 setNomeUsuario(res.data)
         }).catch((err) => {
             console.error("ops! ocorreu um erro" + err);
