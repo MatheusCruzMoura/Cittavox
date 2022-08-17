@@ -42,7 +42,7 @@ function Home() {
     const [nomeUsuario, setNomeUsuario] = useState();
 
     useEffect(() => {
-      api.get(`/home/`).then(
+      api.get(`/user/1`).then(
             (res) => {
                 console.log(res.data)
                 setNomeUsuario(res.data)

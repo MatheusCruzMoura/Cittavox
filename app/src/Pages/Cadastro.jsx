@@ -49,8 +49,8 @@ function Cadastro() {
     if(senha.value != confirmarSenha.value) {
       confirmarSenha.setCustomValidity("As senhas não são iguais!");
     } else {
-      confirmarSenha.setCustomValidity('');
       setValue("senha", senha.value);
+      confirmarSenha.setCustomValidity('');
     }
   }
 
@@ -74,7 +74,7 @@ function Cadastro() {
           <img src={dateIcon} />
           <section>
             <label for='dataNascimento'>Data de nascimento</label>
-            <input type='date' id='dataNascimento' {...register("dataNascimeto", { required: true })} />
+            <input type='date' id='dataNascimento' {...register("dataNascimento", { required: true })} />
           </section>
         </InputLogin>
 
