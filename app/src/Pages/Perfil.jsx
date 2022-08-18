@@ -37,7 +37,7 @@ function Perfil() {
   return (
     <BodyLogin>
 
-      <MenuTop pagina="Perfil"/>
+      <MenuTop pagina="Perfil" />
 
       <PerfilDados>
         <FotoPerfil as='img' src={FotoPerfilUrl} />
@@ -46,44 +46,46 @@ function Perfil() {
           <P>Total de reclamações: {reclamações}</P>
           <Ddados>
             <P2>Pendentes {Pendentes}</P2>
-            <P2>Comcluidos {reclamações-Pendentes}</P2>
+            <P2>Comcluidos {reclamações - Pendentes}</P2>
           </Ddados>
         </Dados>
       </PerfilDados>
 
-      <Informacao>       
+      <Informacao>
         <Roboto11>Nome Completo</Roboto11>
         <InfoPerfil>
-            <input id='nomeInfo' placeholder={nome} required />
+          <input id='nomeInfo' placeholder={nome} required />
         </InfoPerfil>
-        
+
         <Roboto11>Genero</Roboto11>
         <InfoPerfil>
-            <input id='genero' placeholder={genero} required />            
+          <input id='genero' placeholder={genero} required />
         </InfoPerfil>
 
         <Roboto11>Data de nascimento</Roboto11>
         <InfoPerfil>
-             <input type='date' id='dataNascimento' value={dataNascimento} required />            
+          <input type='date' id='dataNascimento' value={dataNascimento} required />
         </InfoPerfil>
 
         <Roboto11>Sua descrição</Roboto11>
         <InfoPerfil>
-            <input id='descrição' placeholder={descricao} required />            
+          <input id='descrição' placeholder={descricao} required />
         </InfoPerfil>
 
-      </Informacao> 
+      </Informacao>
 
-      <RobotoPerfil href=''>Salvar informações</RobotoPerfil>
-      <RobotoPerfil2 href='/'>Sair da conta</RobotoPerfil2>
+      <RobotoPerfil href=''><p>Salvar informações</p></RobotoPerfil>
+      <RobotoPerfil2 href='/'><p>Sair da conta</p></RobotoPerfil2>
 
-        <HomeMenu2>
-          <MenuIcone href='/Home' ><img src={houseMenu} /></MenuIcone>
-          <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
-          <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
-          <MenuIcone href='/perfil' className='selected'><img src={userSelected} /></MenuIcone>
-        </HomeMenu2>
-      </BodyLogin>    
+      <div className="end"> Cittavox </div>
+
+      <HomeMenu2>
+        <MenuIcone href='/Home' ><img src={houseMenu} /></MenuIcone>
+        <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
+        <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
+        <MenuIcone href='/perfil' className='selected'><img src={userSelected} /></MenuIcone>
+      </HomeMenu2>
+    </BodyLogin>
   )
 }
 
