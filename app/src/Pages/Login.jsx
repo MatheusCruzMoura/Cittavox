@@ -7,6 +7,8 @@ import {
   useNavigate
 } from "react-router-dom"
 
+import { ToastContainer, toast } from "react-toastify"
+
 import BodyLogin from '../components/body/Login'
 
 import MenuTop from '../components/menus/MenuTF/MenuTop'
@@ -39,13 +41,26 @@ function Login() {
 
   const navigate = useNavigate();
 
+  const notify = (menssagem, tipo) => toast(menssagem, {type: tipo})
+
   const onSubmit = data => {
     
-    // api.post("/login", data).the
+    api.post("/login", data, {
+      headers: {
+        "content-type": "text/html; charset=utf-8"
+      }
+    }).then((result) => {
+      console.log(result)
+      const data = result.data
+      localStorage.setItem("sessionID", data.sessionID)
+      localStorage.setItem("nome", data.nome)
+      navigate("/home")
+    }).catch((err) => {
+      console.log(err)
+      notify(err.message, "error")
+    })
 
-    navigate("/home")
     // console.log(data)
-    console.log(JSON(data))
   };
 
   return (
