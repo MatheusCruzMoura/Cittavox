@@ -34,6 +34,7 @@ function App() {
     <>      
       <Router>
         <Routes>
+          <Route path='/*' element={<h1>Erro 404! Página não encontrada!</h1>} />
           <Route path='/' element={<Inicio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/cadastro' element={<Cadastro />} />

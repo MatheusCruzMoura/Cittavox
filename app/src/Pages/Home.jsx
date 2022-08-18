@@ -39,83 +39,83 @@ import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userMenu from '../assets/icons/menu/user-icon.svg'
 
 function Home() {
-    const [nomeUsuario, setNomeUsuario] = useState();
+    const [nomeUsuario, setNomeUsuario] = useState("seja bem vindo!");
 
     useEffect(() => {
-      api.get("/teste").then(
-            (res) => {
-                console.log(res)
-                setNomeUsuario(res.data)
-        }).catch((err) => {
-            console.error("ops! ocorreu um erro" + err);
-        });
+        // api.get(`/user/1`).then(
+        //     (res) => {
+        //         console.log(res.data)
+        // setNomeUsuario(localStorage.getItem("nome") || "seja bem vindo!")
+            // }).catch((err) => {
+            //     console.error("ops! ocorreu um erro" + err);
+            // });
     }, []);
 
-  return (
-    <>
-      <Body>
-        <NavbarHome>            
-        <a href='/perfil'><UserHome src={userImg} /></a>
-            <Nunito2>Inicio</Nunito2>
-            <img className='notificacao' src={notificacaoIcon} />
-        </NavbarHome>
+    return (
+        <>
+            <Body>
+                <NavbarHome>
+                    <a href='/perfil'><UserHome src={userImg} /></a>
+                    <Nunito2>Inicio</Nunito2>
+                    <img className='notificacao' src={notificacaoIcon} />
+                </NavbarHome>
 
-        <HeadLine />
+                <HeadLine />
 
-        <NomeUsuario>
-            <h1>Olá, {nomeUsuario?.nome}!</h1>
-            <h2>Bom dia!</h2>
-        </NomeUsuario>
+                <NomeUsuario>
+                    <h1>Olá, {nomeUsuario}!</h1>
+                    <h2>Bom dia!</h2>
+                </NomeUsuario>
 
-        <HomeBusca>
-            <input type='text' id='busca' placeholder='Pesquisar empresa ou local' />
-            <label for='busca'>
-                <img className='busca' src={buscaIcon} />
-            </label>
-        </HomeBusca>
+                <HomeBusca>
+                    <input type='text' id='busca' placeholder='Pesquisar empresa ou local' />
+                    <label for='busca'>
+                        <img className='busca' src={buscaIcon} />
+                    </label>
+                </HomeBusca>
 
-        <HomeBemVindo>
-            <section>
-                <BannerTitulo>Bem Vindo!</BannerTitulo>
-                <BannerSubtitulo>Faça sua reclamação</BannerSubtitulo>
-                <BannerSubtitulo>publica sem medo</BannerSubtitulo>
-            </section>
+                <HomeBemVindo>
+                    <section>
+                        <BannerTitulo>Bem Vindo!</BannerTitulo>
+                        <BannerSubtitulo>Faça sua reclamação</BannerSubtitulo>
+                        <BannerSubtitulo>publica sem medo</BannerSubtitulo>
+                    </section>
 
-            <img className='imagem' src={BemVindoImg} />
-        </HomeBemVindo>
+                    <img className='imagem' src={BemVindoImg} />
+                </HomeBemVindo>
 
-        <Roboto4>Opções disponiveis</Roboto4>
-        <HomeMenu1>
-            <HomeMenu1Item href='/criar-Reclamacao'>
-                <img src={reclamacaoIcon} />
-                <ItemTitulo>Faça uma reclamação</ItemTitulo>
-            </HomeMenu1Item>
+                <Roboto4>Opções disponiveis</Roboto4>
+                <HomeMenu1>
+                    <HomeMenu1Item href='/criar-Reclamacao'>
+                        <img src={reclamacaoIcon} />
+                        <ItemTitulo>Faça uma reclamação</ItemTitulo>
+                    </HomeMenu1Item>
 
-            <HomeMenu1Item href='/Ultima-Reclamacao'>
-                <img src={ultimaReclamacaoIcon} />
-                <ItemTitulo>Última reclamação</ItemTitulo>
-            </HomeMenu1Item>
-            
-            <HomeMenu1Item href='/historico'>
-                <img src={historicoIcon} />
-                <ItemTitulo>Histórico de reclamações</ItemTitulo>
-            </HomeMenu1Item>
-            
-            <HomeMenu1Item href='/mapa'>
-                <img src={proximasIcon} />
-                <ItemTitulo>Reclamações próxima a você</ItemTitulo>
-            </HomeMenu1Item>
-        </HomeMenu1>
-        
-        <HomeMenu2>
-            <MenuIcone href='/home' className='selected'><img src={houseMenu} /></MenuIcone>
-            <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
-            <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
-            <MenuIcone href='/Perfil'><img src={userMenu} /></MenuIcone>
-        </HomeMenu2>
-      </Body>
-    </>
-  )
+                    <HomeMenu1Item href='/Ultima-Reclamacao'>
+                        <img src={ultimaReclamacaoIcon} />
+                        <ItemTitulo>Última reclamação</ItemTitulo>
+                    </HomeMenu1Item>
+
+                    <HomeMenu1Item href='/historico'>
+                        <img src={historicoIcon} />
+                        <ItemTitulo>Histórico de reclamações</ItemTitulo>
+                    </HomeMenu1Item>
+
+                    <HomeMenu1Item href='/mapa'>
+                        <img src={proximasIcon} />
+                        <ItemTitulo>Reclamações próxima a você</ItemTitulo>
+                    </HomeMenu1Item>
+                </HomeMenu1>
+
+                <HomeMenu2>
+                    <MenuIcone href='/home' className='selected'><img src={houseMenu} /></MenuIcone>
+                    <MenuIcone href='/mapa'><img src={mapaMenu} /></MenuIcone>
+                    <MenuIcone href='/historico'><img src={historicoMenu} /></MenuIcone>
+                    <MenuIcone href='/Perfil'><img src={userMenu} /></MenuIcone>
+                </HomeMenu2>
+            </Body>
+        </>
+    )
 }
 
 export default Home
