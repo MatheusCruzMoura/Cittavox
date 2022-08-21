@@ -39,16 +39,16 @@ import historicoMenu from '../assets/icons/menu/historico-icon.svg'
 import userMenu from '../assets/icons/menu/user-icon.svg'
 
 function Home() {
-    const [nomeUsuario, setNomeUsuario] = useState("seja bem vindo!");
+    const [nomeUsuario, setNomeUsuario] = useState();
 
     useEffect(() => {
-        // api.get(`/user/1`).then(
-        //     (res) => {
-        //         console.log(res.data)
-        // setNomeUsuario(localStorage.getItem("nome") || "seja bem vindo!")
-            // }).catch((err) => {
-            //     console.error("ops! ocorreu um erro" + err);
-            // });
+        api.get(`/user/13`).then(
+            (res) => {
+                console.log(res.data)
+                setNomeUsuario(res.data);
+            }).catch((err) => {
+                console.error("ops! ocorreu um erro" + err);
+            });
     }, []);
 
     return (
@@ -63,7 +63,7 @@ function Home() {
                 <HeadLine />
 
                 <NomeUsuario>
-                    <h1>Olá, {nomeUsuario}!</h1>
+                    <h1>Olá, {nomeUsuario?.nome}!</h1>
                     <h2>Bom dia!</h2>
                 </NomeUsuario>
 
