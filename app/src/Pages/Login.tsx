@@ -42,7 +42,7 @@ function Login() {
         <InputLogin>
           <img src={emailIcon} />
           <section>
-            <label for='email'>Endereço de email</label>
+            <label htmlFor='email'>Endereço de email</label>
             <input type='email' id='email' placeholder='exemplo@email.com' required />
           </section>
         </InputLogin>
@@ -50,7 +50,7 @@ function Login() {
         <InputLogin>
           <img src={senhaIcon} />
           <section>
-            <label for='senha'>Senha</label>
+            <label htmlFor='senha'>Senha</label>
             <input type='password' id='senha' placeholder='*********' required />
           </section>
         </InputLogin>

@@ -42,7 +42,7 @@ function Cadastro() {
         <InputLogin>
           <img src={userIcon} />
           <section>
-            <label for='nome'>Nome completo</label>
+            <label htmlFor='nome'>Nome completo</label>
             <input id='nome' placeholder='Nome do Usuário' required />
           </section>
         </InputLogin>
@@ -50,7 +50,7 @@ function Cadastro() {
         <InputLogin>
           <img src={dateIcon} />
           <section>
-            <label for='dataNascimento'>Data de nascimento</label>
+            <label htmlFor='dataNascimento'>Data de nascimento</label>
             <input type='date' id='dataNascimento' required />
           </section>
         </InputLogin>
@@ -58,7 +58,7 @@ function Cadastro() {
         <InputLogin>
           <img src={emailIcon} />
           <section>
-            <label for='email'>Endereço de email</label>
+            <label htmlFor='email'>Endereço de email</label>
             <input type='email' id='email' placeholder='exemplo@email.com' required />
           </section>
         </InputLogin>
@@ -66,7 +66,7 @@ function Cadastro() {
         <InputLogin>
           <img src={senhaIcon} />
           <section>
-            <label for='senha'>Senha</label>
+            <label htmlFor='senha'>Senha</label>
             <input type='password' id='senha' placeholder='*********' required />
           </section>
         </InputLogin>
@@ -74,7 +74,7 @@ function Cadastro() {
         <InputLogin>
           <img src={senhaIcon} />
           <section>
-            <label for='confirmacaoSenha'>Confirme a senha</label>
+            <label htmlFor='confirmacaoSenha'>Confirme a senha</label>
             <input type='password' id='confirmacaoSenha' placeholder='*********' required />
           </section>
         </InputLogin>
